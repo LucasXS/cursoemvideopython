@@ -5,7 +5,7 @@ mesesPagar = int(input('Em quantos meses você vai pagar? '))
 valorPrestacao = valorCasa / mesesPagar
 salarioLiberado = (salarioComprador * 0.30)
 
-if valorPrestacao < salarioLiberado:
+if valorPrestacao <= salarioLiberado:
     print(f'\033[1:31mPARABÉNS!\033[mEmprestimo Aprovado!! O valor de R${salarioLiberado}'
           f' é suficiente para aproação do emprestimo')
 else:
