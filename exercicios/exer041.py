@@ -1,9 +1,8 @@
 from datetime import date
+anaAtual = date.today().year
 
 nome = str(input('Digite seu nome: ')).upper()
 anoNascimento = int(input('Ano de nascimento: '))
-
-anaAtual = date.today().year
 idadeAtual = anaAtual - anoNascimento
 
 if idadeAtual <= 9:
