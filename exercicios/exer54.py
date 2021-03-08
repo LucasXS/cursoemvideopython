@@ -2,13 +2,17 @@
 # maioridade e quantos já são maiores
 
 from datetime import date
-anoAtual = date.today().year
+currentYear = date.today().year #variável geral para receber o ano atula
 
+cont = 0
+cont2 = 0
 for c in range(1, 8):
-    anoNascimento = int(input(f'{c} Digite o ano de seu nascimento: '))
-    idade = (anoAtual - anoNascimento)
-    print(f'Quem nasceu em {anoNascimento}, tem {idade} anos em {anoAtual}')
-    if idade < 18:
-        print('Você não atingiu a maioridade!')
+    YearOfBirth = int(input(f'{c} Type the year of birth: '))
+    age = (currentYear - YearOfBirth)
+    #print(f'Who was born in {YearOfBirth}, is {age} years old in {currentYear}')
+    if age < 18:
+        cont += 1
     else:
-        print('Você já pode ser preso!')
+        cont2 += 1
+print(f'Ao todo tivemos {cont2} pessoas maiores de idade!')
+print(f'E também tivemos {cont} pessoas menores de idade')
