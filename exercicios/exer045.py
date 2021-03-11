@@ -1,6 +1,5 @@
-#crie um programa que faça o computador jogar JOKENPÔ com você!
 import random
-from  time import sleep
+from time import sleep
 
 itens = ('Pedra', 'Papel', 'Tesoura')
 computador = random.randint(0, 2)
