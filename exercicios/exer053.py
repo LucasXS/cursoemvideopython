@@ -3,11 +3,11 @@
 
 letra = 0
 frase = str(input('FRASE: ')).upper().strip()
-palavra = frase.split()        #['lucas', 'e', 'cara']
+palavra = frase.split()     # ['lucas', 'e', 'cara']
 junto = frase.replace(' ', '') # Remover os espaços internos -> junto = ''.join(palavra)
-inverso = '' #print(junto[::-1]) #Invesrso
+inverso = ''    # print(junto[::-1]) #Invesrso
 
-for letra in range(len(junto) -1, -1, -1):
+for letra in range(len(junto) - 1, -1, -1):
     inverso += junto[letra]
 if inverso == junto:
     print(f'Frase \033[31m{junto}\033[m e seu inverso \033[33m{inverso}\033[m é um Palindromo!')
