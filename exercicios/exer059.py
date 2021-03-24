@@ -1,12 +1,6 @@
-# ler um dois valores e mostre um menu na tela
-# 1 - somar - 2 multiplicar - 3 maior - 4 novos números - 5 sair do programa
-# seu programa deverá realizar a operação solicitada em cada caso
-
 operador = 0
-
 num1 = float(input('Valor A: '))
 num2 = float(input('Valor B: '))
-
 while operador != 5:
     print('=-'*30)
     print(' [1] - Somar\n [2] - Multiplicar\n [3] - Maior\n [4] - Novos números\n [5] - Sair do progrma')
@@ -29,6 +23,8 @@ while operador != 5:
         # informe o número novamente
         num1 = float(input('Valor A: '))
         num2 = float(input('Valor B: '))
-    else:
+    elif operador == 5:
         print('FIM DO PROGRAMA...')
+    else:
+        print('Opção invalida!')
 print('ATÉ A PRÓXIMA!!')
