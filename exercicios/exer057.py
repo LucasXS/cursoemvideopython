@@ -1,11 +1,5 @@
-# ler o sexo de uma pessoa [M/F]. Caso entre com outro valor informar para digitar o valor correto
-
-sexo = 'M'
-while sexo == 'F' or sexo == 'M':
-    sexo = str(input('Informe seu sexo: [F/M} ')).upper()
-    if sexo == 'F':
-        print('Sexo Feminino')
-    elif sexo == 'M':
-        print('Sexo Masculino')
-    else:
-        print('Digite um valor valido!')
+# vai tirar os espaços, caixa alto e vai pegar só a primeira letra
+sexo = str(input('Informe seu sexo: [F/M} ')).strip().upper()[0]
+while sexo not  in 'MnFf':      # enquanto sexto não estiver em masc-fem.
+    sexo = str(input('Dados inválidos. Por favor, informe seu sexo: ')).strip().upper()[0]
+print(f'Sexo {sexo} registrado com sucesso')
