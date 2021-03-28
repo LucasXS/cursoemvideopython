@@ -8,8 +8,8 @@ print('-=' * 30)
 soma = cont = 0
 while True:
     jogador = int(input('Diga um valor: '))
-    sinal = str(input('Pagar ou Impar? [P/I] ')).upper().split()
-    computador = randint(1, 11)
+    sinal = str(input('Pagar ou Impar? [P/I] ')).upper().strip()[0]
+    computador = randint(1, 10)
     soma = jogador + computador
     if soma % 2 == 0 and sinal == 'P':
         cont += 1
@@ -18,6 +18,7 @@ while True:
         cont += 1
         print(f'\033[1;31mVOCÊ GANHOU!\033[m Sequencia de vitorias {cont}')
     else:
-        print(f'\033[1;33mVOCÊ PERDEU!\033[m Sua sequencia de vitoria era de {cont}')
+        print(f'\033[1;33mVOCÊ PERDEU!\033[m Sua sequencia de vitoria era de {cont}'
+              f'Computador escolheu {computador}')
         break
 print('FIM')
